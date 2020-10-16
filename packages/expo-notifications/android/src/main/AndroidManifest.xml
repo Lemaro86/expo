@@ -18,6 +18,15 @@
       android:exported="false">
       <intent-filter>
         <action android:name="expo.modules.notifications.TRIGGER_EVENT" />
+      </intent-filter>
+    </receiver>
+
+    <receiver
+      android:name=".service.NotificationsService"
+      android:enabled="true"
+      android:exported="false">
+      <intent-filter>
+        <action android:name="expo.modules.notifications.NOTIFICATION_EVENT" />
 
         <action android:name="android.intent.action.BOOT_COMPLETED" />
         <action android:name="android.intent.action.QUICKBOOT_POWERON" />
